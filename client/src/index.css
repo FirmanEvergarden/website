@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 24 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin-top: 0;
+  }
+  
+  img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  a {
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-neutral-800 font-medium py-2 px-3;
+  }
+  
+  .nav-link:hover {
+    @apply text-primary;
+  }
+  
+  .nav-active-indicator {
+    @apply h-1 bg-primary absolute bottom-0 left-0 right-0;
+  }
+  
+  @media (max-width: 767px) {
+    .nav-active-indicator {
+      @apply hidden;
+    }
+  }
+  
+  /* Animasi halaman */
+  .page-transition {
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animasi untuk konten */
+  .section-content {
+    animation: slideUpFade 0.5s ease-out forwards;
+    animation-play-state: paused;
+  }
+
+  .section-content.visible {
+    animation-play-state: running;
+  }
+
+  /* Animasi slide up dengan fade */
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animasi pulse untuk highlight pada elemen */
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+    }
+  }
+
+  .step-card {
+    @apply transition-transform duration-200;
+  }
+
+  .step-card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/90;
+  }
+  
+  /* Container responsive */
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .nav-link {
+      @apply block w-full text-center;
+    }
+    
+    h1 {
+      @apply text-2xl sm:text-3xl font-bold !important;
+      line-height: 1.3 !important;
+    }
+    
+    h2 {
+      @apply text-xl sm:text-2xl font-bold !important;
+      line-height: 1.4 !important;
+    }
+    
+    h3 {
+      @apply text-lg font-bold !important;
+    }
+    
+    p, li {
+      @apply text-sm sm:text-base !important;
+    }
+    
+    .step-card {
+      @apply p-4 !important;
+    }
+  }
+}

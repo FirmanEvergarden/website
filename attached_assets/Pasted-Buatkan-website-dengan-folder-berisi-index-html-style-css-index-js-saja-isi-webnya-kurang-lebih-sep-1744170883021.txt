@@ -1,0 +1,404 @@
+Buatkan website dengan folder berisi
+index.html
+style.css
+index.js
+saja
+
+isi webnya kurang lebih seperti ini
+
+Dashboard yang berisi Pengenalan tentang Bot Whatsapp dan Penjelasan Website DigiFlazz buat estetik dan penjelasan lengkap
+
+Ada Sections / Navigasi Bar dibagian Atas Kiri website isinya
+- Cara Mendaftar Digiflazz 
+"Mendaftar Digiflazz sebagai Buyer, termasuk langkah untuk mengisi data perusahaan dan memilih software NodeJS:"
+
+
+---
+
+1. Kunjungi Website Resmi Digiflazz
+
+Buka https://digiflazz.com melalui browser.
+
+
+---
+
+2. Klik Tombol "Daftar"
+
+Biasanya tombol Daftar berada di pojok kanan atas halaman utama.
+
+
+---
+
+3. Pilih Tipe Akun: Buyer
+
+Pada halaman pendaftaran:
+
+Pilih Tipe Akun: Buyer
+
+
+> Buyer cocok untuk Anda yang ingin melakukan pembelian produk digital seperti pulsa, paket data, token listrik, dll.
+
+
+
+
+---
+
+4. Isi Data Pribadi
+
+Lengkapi informasi berikut:
+
+Nama Lengkap
+
+Email Aktif
+
+Nomor HP Aktif
+
+Password (buat kombinasi kuat)
+
+Centang Saya menyetujui syarat & ketentuan
+
+Klik Daftar
+
+
+
+---
+
+5. Verifikasi Email
+
+Cek email masuk dari Digiflazz, lalu klik tautan verifikasi untuk mengaktifkan akun Anda.
+
+
+---
+
+6. Login ke Dashboard Digiflazz
+
+Setelah verifikasi, login ke https://digiflazz.com menggunakan email dan password yang didaftarkan.
+
+
+---
+
+7. Lengkapi Data Perusahaan
+
+Masuk ke menu Akun > Profil > Perusahaan, isi data berikut:
+
+Nama Perusahaan: (isi sesuai nama usaha kamu)
+
+Alamat Lengkap: (alamat usaha)
+
+Nama Pemilik/Perwakilan: (namamu)
+
+Nomor HP Perusahaan
+
+Email Perusahaan
+
+
+
+---
+
+8. Pilih Software > Software Lain > NodeJS
+
+Masih di halaman profil:
+
+1. Klik menu Software atau API
+
+
+2. Pilih Software Lain
+
+
+3. Ketik atau pilih NodeJS
+(menandakan kamu akan menggunakan NodeJS untuk mengakses API Digiflazz)
+
+---
+
+9. Simpan Perubahan
+
+Setelah semua data diisi, klik Simpan atau Update Profil.
+
+- Cara Membuat Akun MongoDB
+Berikut adalah Tutorial Lengkap Membuat Akun MongoDB dan mengatur koneksi dengan NodeJS (MongoDB Driver):
+
+
+---
+
+1. Kunjungi Situs MongoDB
+
+Buka https://www.mongodb.com
+Klik tombol Sign Up di pojok kanan atas.
+
+
+---
+
+2. Daftar Akun MongoDB
+
+Isi formulir pendaftaran:
+
+Nama Lengkap
+
+Email Aktif
+
+Password
+
+Klik Sign Up
+
+
+Atau daftar dengan akun Google/GitHub jika lebih praktis.
+
+
+---
+
+3. Verifikasi Email
+
+Cek email masuk dari MongoDB dan klik tautan verifikasi.
+
+
+---
+
+4. Buat Project Baru
+
+Setelah login:
+
+Klik New Project
+
+Beri nama project (misalnya: BotWhatsApp)
+
+Klik Next
+
+
+
+---
+
+5. Buat Cluster Gratis
+
+Pilih Shared Cluster (Free)
+
+Lokasi server: Pilih region terdekat (misal: Singapore)
+
+Klik Create Cluster
+
+
+Tunggu beberapa menit sampai cluster aktif.
+
+
+---
+
+6. Buat Username Database
+
+Masuk ke Database Access (menu kiri)
+
+Klik Add New Database User
+
+Username: bebas (misal: botuser)
+
+Password: bebas, simpan dengan baik
+
+Role: pilih Read and Write to Any Database
+
+Klik Add User
+
+
+
+---
+
+7. Izinkan IP Akses
+
+Masuk ke Network Access
+
+Klik Add IP Address
+
+Pilih Allow Access from Anywhere (0.0.0.0/0)
+
+Klik Confirm
+
+
+
+---
+
+8. Ambil Connection String (URI)
+
+Masuk ke Database > Connect > Drivers
+
+Pilih Node.js
+
+Salin Connection URI seperti ini:
+
+
+mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+
+Ganti <username> dan <password> dengan yang tadi kamu buat.
+
+- Cara Mengkoneksikan Digiflazz ke Google Authenticator dan Cara Melihat Production KEY
+
+Berikut adalah cara menghubungkan akun Digiflazz dengan Google Authenticator dan cara melihat Production Key (API Key) untuk digunakan di sistem produksi seperti bot atau aplikasi kamu:
+
+
+---
+
+1. Aktifkan Google Authenticator di Digiflazz
+
+Langkah-langkah:
+
+1. Login ke akun Digiflazz kamu di https://digiflazz.com
+
+
+2. Masuk ke menu Akun > Keamanan
+
+
+3. Di bagian Two Factor Authentication (2FA), klik tombol Aktifkan
+
+
+4. Akan muncul QR Code
+
+Buka aplikasi Google Authenticator di HP kamu
+
+Tambahkan akun dengan cara:
+
+Klik tombol +
+
+Pilih Pindai barcode
+
+Arahkan kamera ke QR Code dari Digiflazz
+
+
+
+
+5. Setelah kode ditambahkan, akan muncul 6 digit kode OTP
+
+
+6. Masukkan kode OTP tersebut ke form Digiflazz lalu klik Aktifkan
+
+
+
+Catatan:
+
+Setiap login dan akses data sensitif, kamu akan diminta memasukkan kode dari Google Authenticator.
+
+
+---
+
+Cara Mengambil Production Key (API Key) Digiflazz
+
+1. Login ke Akun Digiflazz
+Buka https://digiflazz.com, lalu masuk menggunakan email dan password kamu.
+
+
+2. Masuk ke Menu API
+Setelah login, klik menu API dari sidebar kiri atau melalui dashboard.
+
+
+3. Klik “Tampilkan Production Key”
+Kamu akan melihat tombol bertuliskan "Tampilkan Production Key" di bagian API Key. Klik tombol tersebut.
+
+
+4. Masukkan OTP dari Google Authenticator
+
+Buka aplikasi Google Authenticator di HP kamu.
+
+Cari akun Digiflazz.
+
+Ambil 6 digit kode OTP yang muncul.
+
+Masukkan kode OTP tersebut di kolom verifikasi pada website Digiflazz.
+
+
+
+5. Lihat dan Salin Production Key
+Setelah OTP benar, Production Key akan ditampilkan.
+
+Salin key tersebut.
+
+Gunakan langsung di kode program kamu.
+
+- Cara Recode Script
+Berikut adalah penjelasan lengkap dan mudah dipahami untuk pemula tentang cara mengedit config.js, khususnya untuk menghindari kesalahan umum saat memodifikasi format teks atau kode:
+
+
+---
+
+Penjelasan Recode / Edit config.js untuk Pemula
+
+Saat kamu mengedit file config.js, kamu harus berhati-hati dengan penulisan karakter spesial agar kode tetap bisa dijalankan dengan baik.
+
+Berikut ini beberapa aturan penting dan contoh supaya kamu tidak bingung:
+
+
+---
+
+1. Jangan Menghapus Tanda Backtick (`) atau Kutipan
+
+Contoh:
+
+let pesan = `Halo, selamat datang di bot kami!`;
+
+Jangan dihapus karakter backtick (`) karena itu penting untuk membungkus teks.
+
+
+---
+
+2. Jika Ingin Menambahkan Karakter ` di Dalam Pesan
+
+Gunakan backslash (\) sebelum tanda ` untuk menghindari error.
+
+Contoh salah (akan error):
+
+let pesan = `Gunakan tombol `Beli Sekarang``;
+
+Contoh benar:
+
+let pesan = `Gunakan tombol \`Beli Sekarang\``;
+
+
+---
+
+3. Buat Baris Baru dengan \n
+
+Kalau kamu ingin menambahkan enter/baris baru di dalam teks:
+
+let pesan = `Halo!\nSilakan pilih menu:\n1. Cek Saldo\n2. Isi Pulsa`;
+
+Hasilnya saat dikirim bot:
+
+Halo!
+Silakan pilih menu:
+1. Cek Saldo
+2. Isi Pulsa
+
+
+---
+
+4. Menyisipkan Variabel di Dalam Teks
+
+Kalau kamu pakai backtick (`) kamu bisa menyisipkan variabel menggunakan ${}
+
+Contoh:
+
+let nama = "Fikri";
+let pesan = `Halo ${nama}, selamat datang!`;
+
+
+---
+
+5. Hindari Karakter Aneh
+
+Jangan tempel tanda kutip atau karakter asing tanpa alasan
+
+Jika error setelah edit, cek ulang: mungkin ada backtick () atau kutip ('atau"`) yang hilang
+
+
+
+---
+
+6. Gunakan Format Rapi
+
+Contoh format config.js yang rapi:
+
+module.exports = {
+  namaBot: "BotKu",
+  pesanSelamatDatang: `Halo, selamat datang di BotKu!\nKetik *menu* untuk melihat fitur.\n\nGunakan tombol \`Beli Sekarang\` jika ingin transaksi.`,
+}
+
+
+---
+
+
+Buat website dengan tema warna putih dan oren, buat website responsif seperti 120fps, jangan memisahkan tutorial dengan router lain, jadikan 1 router saja dan ketika berpindah Navigasi, pastikan animasi nya sempurna dan 120fps, kerjakan website ini sepremium mungkin!!!!
+berikan result website nya ke File.zip biar saya download tanpa copy kode dari anda
